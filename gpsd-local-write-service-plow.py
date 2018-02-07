@@ -61,7 +61,6 @@ if __name__ == '__main__':
 
       f = open('/home/pi/Desktop/write.json', 'a') #local
       value = 'location':location, 'speed':speed, 'id':id
-      s = str(value)
       json.dump(value, f)
      
       time.sleep(10) #set to whatever
