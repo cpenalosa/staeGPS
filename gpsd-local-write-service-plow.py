@@ -39,6 +39,7 @@ if __name__ == '__main__':
 
       location = geojson.Point((gpsd.fix.longitude, gpsd.fix.latitude))
       speed = gpsd.fix.speed
+      heading = gpsd.fix.track
       routeId = 'Downtown Emergency Vehicle Route 4'
       manufacturedAt = "2017"
       manufacturer = 'Ford'
@@ -58,9 +59,10 @@ if __name__ == '__main__':
       print '----------------------------------------'
       print 'location    ' , gpsd.fix.longitude, gpsd.fix.latitude
       print 'speed       ' , gpsd.fix.speed
+      print 'heading     ' , gpsd.fix.track
 
       f = open('/home/pi/Desktop/write.json', 'a') #local
-      value = 'location':location, 'speed':speed, 'id':id
+      data {'location': location, 'speed':speed, 'heading':heading, 'id':id}
       json.dump(value, f)
      
       time.sleep(10) #set to whatever
