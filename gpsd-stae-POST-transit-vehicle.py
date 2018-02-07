@@ -39,7 +39,7 @@ if __name__ == '__main__':
          
               os.system('clear')
 
-              location = geojson.Point((gpsd.fix.longitude, gpsd.fix.latitude, gpsd.fix.altitude))
+              location = geojson.Point((gpsd.fix.longitude, gpsd.fix.latitude))
               speed = gpsd.fix.speed
               heading = gpsd.fix.track
               routeId = 'M Sixth Avenue Local'
