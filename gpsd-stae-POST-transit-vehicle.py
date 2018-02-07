@@ -13,7 +13,7 @@ import requests
 gpsd = None #seting the global variable
 
 # # Set the address of your server here
-url = 'https://municipal.systems/v1/data?key=keyData' #keyData= is your Data Source Key. Generate this on the Source Page.
+url = 'https://municipal.systems/v1/data?key=keyData' #keyData is your Data Source Key. Generate this on the Source Page.
 
          
 os.system('clear') #clear the terminal (optional)
