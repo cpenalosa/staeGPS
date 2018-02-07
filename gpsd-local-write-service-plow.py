@@ -32,8 +32,6 @@ if __name__ == '__main__':
   try:
     gpsp.start() # start it up
     while True:
-      #It may take a second or two to get good data
-      #print gpsd.fix.longitude,', ',gpsd.fix.latitude,'  gpsd.fix.altitude
  
       os.system('clear')
 
@@ -41,14 +39,14 @@ if __name__ == '__main__':
       speed = gpsd.fix.speed
       heading = gpsd.fix.track
       routeId = 'Downtown Emergency Vehicle Route 4'
-      manufacturedAt = "2017"
+      manufacturedAt = "2017-01-01"
       manufacturer = 'Ford'
       model = 'F-150'
       color = 'Oxford White'
       fuel = 'gas'
       transmission = 'automatic'
-      cost = '45000'
-      value = '37500'
+      cost = 45000
+      value = 37500
       vin = '1HGCM12345A006789'
       plate = '12345NJ' 
       type = 'Snow Plow'
@@ -61,14 +59,14 @@ if __name__ == '__main__':
       print 'speed       ' , gpsd.fix.speed
       print 'heading     ' , gpsd.fix.track
 
-      f = open('/home/pi/Desktop/write.json', 'a') #local
+      f = open('/home/pi/Desktop/write.json', 'a') #local write path to desktop
       data {'location': location, 'speed':speed, 'heading':heading, 'id':id}
       json.dump(value, f)
      
       time.sleep(10) #set to whatever
  
   except (KeyboardInterrupt, SystemExit): #when you press ctrl+c
-    print "\nKilling Thread..."
+    print "\nStopping GPS program..."
     gpsp.running = False
     gpsp.join() # wait for the thread to finish what it's doing
   print "Done.\nExiting."
