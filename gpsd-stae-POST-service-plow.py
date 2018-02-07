@@ -1,7 +1,3 @@
-#! /usr/bin/python
-# Written by Dan Mandle http://dan.mandle.me September 2012, modified by Chris Penalosa, January 2018.
-# License: GPL 2.0
-
 import os
 from gps import *
 from time import *
@@ -45,6 +41,7 @@ if __name__ == '__main__':
 	     
               location = geojson.Point((gpsd.fix.longitude, gpsd.fix.latitude))
               speed = gpsd.fix.speed
+              heading = gpsd.fix.track
               routeId = 'Downtown Emergency Vehicle Route 4'
               manufacturedAt = '2017'
               manufacturer = 'Ford'
@@ -65,9 +62,10 @@ if __name__ == '__main__':
               print '----------------------------------------'
               print 'location    ' , gpsd.fix.longitude, gpsd.fix.latitude
               print 'speed       ' , gpsd.fix.speed
+              print 'heading     ' , gpsd.fix.track
 
 
-              payload = {'id':id, 'speed': gpsd.fix.speed, 'location': location}
+              payload = {'location':location, 'speed':speed, 'heading':heading, 'id':id}
 
               r = requests.post(url, json=payload)
               print r.status_code #200 = successful http request. 400 = bad request; check your syntax.  500 = server error, check stae status page.  
