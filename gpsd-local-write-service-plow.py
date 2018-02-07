@@ -32,11 +32,13 @@ if __name__ == '__main__':
   try:
     gpsp.start() # start it up
     while True:
+      #It may take a second or two to get good data
+      #print gpsd.fix.longitude,', ',gpsd.fix.latitude,'  gpsd.fix.altitude
  
       os.system('clear')
 
       location = geojson.Point((gpsd.fix.longitude, gpsd.fix.latitude))
-      speed = gpsd.fix.speed
+      speed = gpsd.fix.speed/1000
       heading = gpsd.fix.track
       routeId = 'Downtown Emergency Vehicle Route 4'
       manufacturedAt = "2017-01-01"
@@ -56,17 +58,17 @@ if __name__ == '__main__':
       print ' GPS reading'
       print '----------------------------------------'
       print 'location    ' , gpsd.fix.longitude, gpsd.fix.latitude
-      print 'speed       ' , gpsd.fix.speed
+      print 'speed       ' , gpsd.fix.speed/1000
       print 'heading     ' , gpsd.fix.track
 
-      f = open('/home/pi/Desktop/write.json', 'a') #local write path to desktop
-      data {'location': location, 'speed':speed, 'heading':heading, 'id':id}
-      json.dump(value, f)
+      f = open('/home/pi/Desktop/write.json', 'a') #local
+      data = {'location': location, 'speed':speed, 'heading':heading, 'routeId':routeId, 'manufacturedAt':manufacturedAt, 'manufacturer':manufacturer, 'model':model, 'color':color, 'fuel':fuel, 'transmission':transmission, 'cost':cost, 'value':value, 'vin':vin, 'plate':plate, 'type':type, 'id':id,}
+      json.dump(data, f)
      
       time.sleep(10) #set to whatever
  
   except (KeyboardInterrupt, SystemExit): #when you press ctrl+c
-    print "\nStopping GPS program..."
+    print "\nKilling Thread..."
     gpsp.running = False
     gpsp.join() # wait for the thread to finish what it's doing
   print "Done.\nExiting."
