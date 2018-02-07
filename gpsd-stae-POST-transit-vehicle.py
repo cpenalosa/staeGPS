@@ -57,7 +57,7 @@ if __name__ == '__main__':
               payload = {'location':location, 'speed':speed, 'heading':heading, 'routeId':routeId, 'type':type, 'id':id}
 
               r = requests.post(url, json=payload)
-              print r.status.code #200 = successful http request. 400 = bad request; check your syntax.  500 = server error, check stae status page.
+              print r.status_code #200 = successful http request. 400 = bad request; check your syntax.  500 = server error, check stae status page.
          
               time.sleep(10) #default value will send GPS data every 10 seconds. use faster speeds for faster or right-of-way vehicles.
          
