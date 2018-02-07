@@ -43,14 +43,14 @@ if __name__ == '__main__':
               speed = gpsd.fix.speed
               heading = gpsd.fix.track
               routeId = 'Downtown Emergency Vehicle Route 4'
-              manufacturedAt = '2017'
+              manufacturedAt = '2017-01-01' #Use ISO 8601 syntax YYYY-MM-DD 
               manufacturer = 'Ford'
               model = 'F-150'
               color = 'Oxford White'
               fuel = 'gas'
               transmission = 'automatic'
-              cost = '45000'
-              value = '42000'
+              cost = 45000
+              value = 42000
               vin = '1HGCM12345A006789'
               plate = '12345NJ' 
               type = 'Snow Plow'
