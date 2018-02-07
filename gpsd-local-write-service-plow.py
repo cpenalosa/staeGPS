@@ -38,11 +38,10 @@ if __name__ == '__main__':
       os.system('clear')
 
       location = geojson.Point((gpsd.fix.longitude, gpsd.fix.latitude))
-      speed = gpsd.speed
-      heading = gpsd.heading
+      speed = gpsd.fix.speed
       routeId = 'Downtown Emergency Vehicle Route 4'
-      manufactured = "2017"
-      make = 'Ford'
+      manufacturedAt = "2017"
+      manufacturer = 'Ford'
       model = 'F-150'
       color = 'Oxford White'
       fuel = 'gas'
@@ -50,7 +49,7 @@ if __name__ == '__main__':
       cost = '45000'
       value = '37500'
       vin = '1HGCM12345A006789'
-      license plate = '12345NJ' 
+      plate = '12345NJ' 
       type = 'Snow Plow'
       id = 'Plow'+ gpsd.utc 
 
@@ -58,11 +57,10 @@ if __name__ == '__main__':
       print ' GPS reading'
       print '----------------------------------------'
       print 'location    ' , gpsd.fix.longitude, gpsd.fix.latitude
-      print 'speed       ' , gpsd.speed
-      print 'heading     ' , gpsd.heading
+      print 'speed       ' , gpsd.fix.speed
 
-      f = open('/home/pi/Desktop/write', 'a') #local
-      value = location, speed, heading, id
+      f = open('/home/pi/Desktop/write.json', 'a') #local
+      value = 'location':location, 'speed':speed, 'id':id
       s = str(value)
       json.dump(value, f)
      

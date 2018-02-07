@@ -1,7 +1,3 @@
-#! /usr/bin/python
-# Written by Dan Mandle http://dan.mandle.me September 2012, modified by Chris Penalosa, January 2018.
-# License: GPL 2.0
-
 import os
 from gps import *
 from time import *
@@ -44,11 +40,10 @@ if __name__ == '__main__':
               os.system('clear')
 	     
               location = geojson.Point((gpsd.fix.longitude, gpsd.fix.latitude))
-              speed = gpsd.speed
-              heading = gpsd.heading
-              routeID = 'Downtown Emergency Vehicle Route 4'
-              manufactured = '2017'
-              make = 'Ford'
+              speed = gpsd.fix.speed
+              routeId = 'Downtown Emergency Vehicle Route 4'
+              manufacturedAt = '2017'
+              manufacturer = 'Ford'
               model = 'F-150'
               color = 'Oxford White'
               fuel = 'gas'
@@ -56,20 +51,19 @@ if __name__ == '__main__':
               cost = '45000'
               value = '42000'
               vin = '1HGCM12345A006789'
-              license plate = '12345NJ' 
+              plate = '12345NJ' 
               type = 'Snow Plow'
-              id = 'Plow'+ gpsd.utc 
+              id = 'Plow'+ gpsd.utc
 
          	
               print
               print ' GPS reading'
               print '----------------------------------------'
               print 'location    ' , gpsd.fix.longitude, gpsd.fix.latitude
-              print 'speed       ' , gpsd.speed
-              print 'heading     ' , gpsd.heading
+              print 'speed       ' , gpsd.fix.speed
 
 
-              payload = {'id':id, 'speed': gpsd.speed, 'heading': gpsd.heading. 'location': location}
+              payload = {'id':id, 'speed': gpsd.fix.speed, 'location': location}
 
               r = requests.post(url, json=payload)
               print r.status_code #200 = successful http request. 400 = bad request; check your syntax.  500 = server error, check stae status page.  
