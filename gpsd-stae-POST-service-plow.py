@@ -39,7 +39,7 @@ if __name__ == '__main__':
          
               os.system('clear')
 	     
-              location = geojson.Point((gpsd.fix.longitude, gpsd.fix.latitude))
+              location = geojson.Point((round(gpsd.fix.longitude, 3), round(gpsd.fix.latitude, 3)))
               speed = gpsd.fix.speed
               heading = gpsd.fix.track
               routeId = 'Downtown Emergency Vehicle Route 4'
@@ -60,7 +60,7 @@ if __name__ == '__main__':
               print
               print ' GPS reading'
               print '----------------------------------------'
-              print 'location    ' , gpsd.fix.longitude, gpsd.fix.latitude
+              print 'location    ' , round(gpsd.fix.longitude, 3), round(gpsd.fix.latitude, 3)
               print 'speed       ' , gpsd.fix.speed
               print 'heading     ' , gpsd.fix.track
 
