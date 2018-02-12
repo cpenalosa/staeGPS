@@ -35,7 +35,7 @@ if __name__ == '__main__':
               os.system('clear')
 
               location = geojson.Point((round(gpsd.fix.longitude, 5), round(gpsd.fix.latitude, 5)))
-              speed = gpsd.fix.speed
+              speed = gpsd.fix.speed/1000
               heading = gpsd.fix.track
               routeId = 'M Sixth Avenue Local'
               type = 'Subway'
@@ -46,7 +46,7 @@ if __name__ == '__main__':
               print ' GPS reading'
               print '----------------------------------------'
               print 'location    ' , round(gpsd.fix.longitude, 5), round(gpsd.fix.latitude, 5)
-              print 'speed       ' , gpsd.fix.speed
+              print 'speed       ' , gpsd.fix.speed/1000
               print 'heading     ' , gpsd.fix.track
 
               f = open('/home/pi/Desktop/write.json', 'a') #local

@@ -40,7 +40,7 @@ if __name__ == '__main__':
               os.system('clear')
 	     
               location = geojson.Point((round(gpsd.fix.longitude, 5), round(gpsd.fix.latitude, 5)))
-              speed = gpsd.fix.speed
+              speed = gpsd.fix.speed/1000
               heading = gpsd.fix.track
               routeId = 'Downtown Emergency Vehicle Route 4'
               manufacturedAt = '2017-01-01' #Use ISO 8601 syntax YYYY-MM-DD 
