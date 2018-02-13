@@ -40,8 +40,7 @@ if __name__ == '__main__':
               speed = gpsd.fix.speed/1000
               heading = gpsd.fix.track
               manufacturer = 'DJI'
-              operators = array('FCC', 'PAN NJ', 'Amazon')
-              active = false
+              active = False
               model = 'Mavic Pro'
               color = 'Gray'
               type = 'UAV Drone'
