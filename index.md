@@ -16,7 +16,7 @@ Happy building! <br>
 <li> 2.5A/5V DC USB power or car charger with a 2.5A/5B DC port <a href="https://www.amazon.com/Hardwire-Micro-Supply-Raspberry-DURAGADGET/dp/B008OVL4E8" target="_blank"> (Amazon) </a> </li>	
 <li>8GB micro SD card <a href="https://www.amazon.com/SanDisk-MicroSDHC-Standard-Packaging-SDSDQUAN-008G-G4A/dp/B00M55C0VU/ref=sr_1_3?s=electronics&ie=UTF8&qid=1517947886&sr=1-3&keywords=micro+sd+card+8gb" target="_blank"> (Amazon) </a> </li>
 <li> USB GPS Receiver BU-353 <a href="https://www.amazon.com/GlobalSat-BU-353-S4-USB-Receiver-Black/dp/B008200LHW" target="_blank"> (Amazon)</a> </li>
-<li> USB Modem </li> <a href="https://www.amazon.com/Unlocked-Huawei-E397u-53-Worldwide-Required/dp/B01M0JY15V" target="_blank"> (Amazon)
+<li> USB Modem  <a href="https://www.amazon.com/Unlocked-Huawei-E397u-53-Worldwide-Required/dp/B01M0JY15V" target="_blank"> (Amazon)</a> </li>
 <li> Twilio SIM Card <a href="https://www.twilio.com/wireless/pricing" target="_blank"> (Order on Twilio) </a> </li>
 </ul> 
 
