@@ -40,7 +40,7 @@ if __name__ == '__main__':
               os.system('clear')
 	     
               location = geojson.Point((round(gpsd.fix.longitude, 5), round(gpsd.fix.latitude, 5)))
-              speed = gpsd.fix.speed/1000
+              speed = round(gpsd.fix.speed/1000, 3)
               heading = gpsd.fix.track
               routeId = 'Downtown Emergency Vehicle Route 4'
               manufacturedAt = '2017-01-01' #Use ISO 8601 syntax YYYY-MM-DD 
@@ -67,7 +67,7 @@ if __name__ == '__main__':
 
               payload = {'location':location, 'speed':speed, 'heading':heading, 'id':id}
 
-              r = requests.post(url, json=payload)
+              r = requests.post(url, json=payload, params='response=false')
               print r.status_code #200 = successful http request. 400 = bad request; check your syntax.  500 = server error, check stae status page.  
          
               time.sleep(10) #default value will send GPS data every 10 seconds. use faster speeds for faster or right-of-way vehicles.
