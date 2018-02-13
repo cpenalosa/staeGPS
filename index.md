@@ -17,10 +17,10 @@ Happy building! <br>
 <li>8GB micro SD card <a href="https://www.amazon.com/SanDisk-MicroSDHC-Standard-Packaging-SDSDQUAN-008G-G4A/dp/B00M55C0VU/ref=sr_1_3?s=electronics&ie=UTF8&qid=1517947886&sr=1-3&keywords=micro+sd+card+8gb" target="_blank"> (Amazon) </a> </li>
 <li> USB GPS Receiver BU-353 <a href="https://www.amazon.com/GlobalSat-BU-353-S4-USB-Receiver-Black/dp/B008200LHW" target="_blank"> (Amazon)</a> </li>
 <li> USB Modem </li> <a href="https://www.amazon.com/Unlocked-Huawei-E397u-53-Worldwide-Required/dp/B01M0JY15V" target="_blank"> (Amazon)
-<li> Twilio SIM Card <a href="https://www.twilio.com/wireless/pricing" target="_blank"> (Order on Twilio) </li>
+<li> Twilio SIM Card <a href="https://www.twilio.com/wireless/pricing" target="_blank"> (Order on Twilio) </a> </li>
 </ul> 
 
-<h3> Python Scripts </h3>
+<b> Python Scripts </b>
 <ul>
 <li>Snow Plow/Service Vehicle <br> <a href="https://github.com/cpenalosa/staeGPS/blob/master/plow-POST-service-vehicle.py" target="_blank">(posts in real-time to stae) </a> , <a href="https://github.com/cpenalosa/staeGPS/blob/master/plow-local-service-vehicle.py" target="_blank">(writes to local disk)</a> </li>
 <li>Transit Vehicle <br> <a href="https://github.com/cpenalosa/staeGPS/blob/master/subway-POST-transit-vehicle.py" target="_blank">(posts in real-time to stae) </a> , <a href="https://github.com/cpenalosa/staeGPS/blob/master/subway-local-transit-vehicle.py" target="_blank">(writes to local disk)</a></li>
