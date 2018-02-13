@@ -40,7 +40,7 @@ if __name__ == '__main__':
               os.system('clear')
 	     
               location = geojson.Point((round(gpsd.fix.longitude, 5), round(gpsd.fix.latitude, 5)))
-              speed = gpsd.fix.speed/1000
+              speed = round(gpsd.fix.speed/1000, 3)
               heading = gpsd.fix.track
               manufacturer = 'DJI'
               active = False
