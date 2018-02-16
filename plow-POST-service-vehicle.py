@@ -10,6 +10,16 @@ import urllib2
 import requests
 import os, commands, subprocess, re
 
+def find(pat, string):
+match = re.search(pat, string)  # find function for searches below
+if match:
+  return match.group()
+else:
+  return None
+allProcessIDs = os.popen('pgrep -lf python').read()
+sameProcessID = find('\d{7} python plow-POST-service-vehicle.py', allProcessIDs)
+if sameProcessID:
+  raise SystemExit 
 
          
 gpsd = None #seting the global variable
@@ -74,16 +84,7 @@ if __name__ == '__main__':
               r = requests.post(url, json=payload, params='response=false')
               print r.status_code #200 = successful http request. 400 = bad request; check your syntax.  500 = server error, check stae status page.
               
-              def find(pat, string):
-              match = re.search(pat, string)  # find function for searches below
-                if match:
-                  return match.group()
-                else:
-                  return None
-              allProcessIDs = os.popen('pgrep -lf python').read()
-              sameProcessID = find('\d{7} python plow-POST-service-vehicle.py', allProcessIDs)
-                if sameProcessID:
-                  raise SystemExit  
+
          
               time.sleep(10) #default value will send GPS data every 10 seconds. use faster speeds for faster or right-of-way vehicles.
          
