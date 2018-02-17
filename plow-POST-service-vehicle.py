@@ -8,25 +8,11 @@ import threading
 import urllib
 import urllib2
 import requests
-import os, commands, subprocess, re
-
-def find(pat, string):
-match = re.search(pat, string)  # find function for searches below
-if match:
-  return match.group()
-else:
-  return None
-allProcessIDs = os.popen('pgrep -lf python').read()
-sameProcessID = find('\d{7} python plow-POST-service-vehicle.py', allProcessIDs)
-if sameProcessID:
-  raise SystemExit 
-
          
 gpsd = None #seting the global variable
 
 
-url = 'https://municipal.systems/v1/data?key=47c356fd-b52b-4fcd-9f87-3ed18e258a9f' #keyData= is your Data Source Key. Generate this on the Source Page.
-#b6c4c77d-4d04-455a-95e7-ef59a11f285f -prod
+url = 'https://municipal.systems/v1/data?key=keyData' #keyData= is your Data Source Key. Generate this on the Source Page.
          
 os.system('clear') #clear the terminal (optional)
          
@@ -78,7 +64,7 @@ if __name__ == '__main__':
               print 'heading     ' , gpsd.fix.track
 
 
-              payload = {'location':location, 'speed':speed, 'heading':heading, 'id':id}
+              payload = {'location':location, 'speed':speed, 'heading':heading, 'routeId':routeId, 'id':id}
 
 
               r = requests.post(url, json=payload, params='response=false')
