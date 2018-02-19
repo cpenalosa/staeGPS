@@ -1,0 +1,2 @@
+sudo nano /etc/rc.local
+(sleep 60; python /home/pi/Desktop/plow-POST-service-vehicle.py)&
