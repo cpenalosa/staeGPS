@@ -67,8 +67,8 @@ if __name__ == '__main__':
               payload = {'location':location, 'speed':speed, 'heading':heading, 'routeId':routeId, 'id':id}
 
 
-              r = requests.post(url, json=payload, params='response=false')
-              print r.status_code #200 = successful http request. 400 = bad request; check your syntax.  500 = server error, check stae status page.
+              r = requests.post(url, json=payload, params='response=false') #passing response=false in the query to save on data costs.
+              print r.status_code #2xx = successful http request. 4xx = bad request; check your syntax/key.  5xx = server error, check stae status page.
               
 
          
