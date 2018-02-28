@@ -1,2 +1,1 @@
-sudo nano /etc/rc.local
 (sleep 60; python /yourPath/plow-POST-service-vehicle.py)& #copy the file's path into the /yourPath/ section
