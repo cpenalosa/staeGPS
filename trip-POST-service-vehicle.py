@@ -20,7 +20,7 @@ if __name__ == '__main__':
          
               os.system('clear')
 	     
-              path = LineString([-74.047, 40.719])
+              path = LineString([(-74.047, 40.719)])
               startedAt = '2018-01-22T09:45:00.000Z'
               endedAt = '2018-01-22T10:45:00.000Z'
               routeId = 'Downtown Emergency Vehicle Route 4'
