@@ -21,7 +21,7 @@ Happy building! <br>
 
 <b> Python Scripts </b>
 <ul>
-<li>Snow Plow/Service Vehicle <br> <a href="https://github.com/cpenalosa/staeGPS/blob/master/plow-POST-service-vehicle.py" target="_blank">(posts in real-time to stae) </a> , <a href="https://github.com/cpenalosa/staeGPS/blob/master/plow-local-service-vehicle.py" target="_blank">(writes to local disk)</a> </li>
-<li>Transit Vehicle <br> <a href="https://github.com/cpenalosa/staeGPS/blob/master/subway-POST-transit-vehicle.py" target="_blank">(posts in real-time to stae) </a> , <a href="https://github.com/cpenalosa/staeGPS/blob/master/subway-local-transit-vehicle.py" target="_blank">(writes to local disk)</a></li>
-<li>UAS/Delivery Drone <br> <a href="https://github.com/cpenalosa/staeGPS/blob/master/dDrone-POST-UAS.py" target="_blank">(posts in real-time to stae) </a> , <a href="https://github.com/cpenalosa/staeGPS/blob/master/dDrone-local-UAS.py" target="_blank">(writes to local disk)</a></li>
+<li>Snow Plow/Service Vehicle <br> <a href="https://github.com/cpenalosa/staeGPS/blob/master/Service%20Vehicle%20Tracker/plow-POST-service-vehicle.py" target="_blank">(posts in real-time to stae) </a> , <a href="https://github.com/cpenalosa/staeGPS/blob/master/Service%20Vehicle%20Tracker/plow-local-service-vehicle.py" target="_blank">(writes to local disk)</a> </li>
+<li>Transit Vehicle <br> <a href="https://github.com/cpenalosa/staeGPS/blob/master/Transit%20Vehicle%20Tracker/subway-POST-transit-vehicle.py" target="_blank">(posts in real-time to stae) </a> , <a href="https://github.com/cpenalosa/staeGPS/blob/master/Transit%20Vehicle%20Tracker/subway-local-transit-vehicle.py" target="_blank">(writes to local disk)</a></li>
+<li>UAS/Delivery Drone <br> <a href="https://github.com/cpenalosa/staeGPS/blob/master/Drone%20Tracker/dDrone-POST-UAS.py" target="_blank">(posts in real-time to stae) </a> , <a href="https://github.com/cpenalosa/staeGPS/blob/master/Drone%20Tracker/dDrone-local-UAS.py" target="_blank">(writes to local disk)</a></li>
 </ul>
