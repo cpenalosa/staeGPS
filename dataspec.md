@@ -12,6 +12,7 @@ The fields marked with an asterisk are already populated when you create the dat
 |notes* | Text 		| Description or further notes about the Service Vehicle. | Not empty | "Snow Plow Deployment for Downtown Routes"
 |manufacturedAt  | Date      | Date/time the vehicle was manufactured. | Not empty | "2018-01-01"
 |startedAt   | Date      | Date/time the vehicle was purchased. |  Not empty | "2018-02-01"
+|endedAt   | Date      | Date/time the vehicle was sold or ended government service. |  Not empty | "2018-03-01"
 |type | Text 		| Categorization of the vehicle. | Not empty | "Snow Plow"
 |operators| Array 	| List of agencies of people responsible for the vehicle. | Not empty, max character length: 2048 | ["Public Works Deparment"]
 |capacity | Text 		| Maximum number of passengers the vehicle can hold. | Not empty, Min: 0, Max:1000 | "5"
