@@ -14,7 +14,7 @@ The fields marked with an asterisk are already populated when you create the dat
 |startedAt   | Date      | Date/time the vehicle was purchased. |  Not empty | "2018-02-01"
 |type | Text 		| Categorization of the vehicle. | Not empty | "Snow Plow"
 |operators| Array 	| List of agencies of people responsible for the vehicle. | Not empty, max character length: 2048 | ["Public Works Deparment"]
-|capacity | Text 		| Maximum number of passengers the vehicle can hold. | Not empty, Min:0, Max:1000 | "5"
+|capacity | Text 		| Maximum number of passengers the vehicle can hold. | Not empty, Min: 0, Max:1000 | "5"
 |manufacturer| Text | Make/manufacturer of the vehicle. | Not empty, max character length: 2048 | "Ford"
 |model  | Text 		| Model of the vehicle. | Not empty, max character length: 2048 | "F-250"
 |color  | Text 		| Color of the vehicle exterior. | Not empty, max character length: 2048 | "Shadow Black"
