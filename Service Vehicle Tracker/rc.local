@@ -1,4 +1,4 @@
 ### access your Pi's rc.local file by typing line 2 into the the terminal. From there, copy the code on line 3 above the exit 0 code
-### $ sudo nano /etc/rc.local
+$ sudo nano /etc/rc.local
 (sleep 60; python /yourPath/plow-POST-service-vehicle.py)& 
 #copy the file's path into the /yourPath/ section
