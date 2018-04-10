@@ -28,11 +28,11 @@ The fields marked with an asterisk are already populated when you create the dat
 |plate | Number 	| Registered license plate code for the vehicle. | Not empty, max character length: 2048 | "ABC1234"
 |active | Boolean 	| True/false if the vehicle is currently in service. | True/False | "True"
 |heading | Number (degrees) 	| Direction the vehicle is pointing | Min: 0, Max: 360 | "175.45"
-|speed 	| Number (KM/H) | Speed the UAS is currently going. | Min: 0, Max: 1000 | "5 KM/H"
+|speed 	| Number (KM/H) | Speed the service vehicle is currently going. | Min: 0, Max: 1000 | "5 KM/H"
 |tripId | Text 		| Unique ID for the current trip the vehicle is on. | Not empty, max character length: 2048 | "Trip 001"
 |routeId | Text 		| Unique ID for the current service route the vehicle is operating on. | Not empty, max character length: 2048 | "CBD Emergency Vehicle Route"  
 |stream | Text 		| URL of the live video feed for the camera. | Not empty, max character length: 2048, stream URL exists | https://stae.co/ServiceFeed
 |images | Array 	| List of images related to the service vehicle | Not empty, max character length: 2048 | [https://stae.co/service1.jpg, https://stae.co/service2.jpg]
-|location | Point 	| Location where the UAS exists. | GEOJSON format | {"type": "Point", "coordinates": [-74.0429, 40.744]}
+|location | Point 	| Location where the service vehicle exists. | GEOJSON format | {"type": "Point", "coordinates": [-74.0429, 40.744]}
 
 
